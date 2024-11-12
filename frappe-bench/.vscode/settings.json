@@ -1,0 +1,6 @@
+{
+    "livePreview.defaultPreviewPath": "/apps/airplane_mode/airplane_mode/airplane/doctype/airplane_flight/templates/airplane_flight.html",
+    "python.analysis.extraPaths": [
+        "./apps/frappe"
+    ]
+}

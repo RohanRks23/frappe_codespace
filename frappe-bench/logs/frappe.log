@@ -1,0 +1,352 @@
+2024-11-05 17:20:06,905 ERROR frappe Unable to load translations
+Site: uber
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 176, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 285, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1731, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1579, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 232, in hget
+    value = generator()
+            ^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 180, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 192, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+2024-11-05 17:20:06,908 ERROR frappe Unable to load translations
+Site: uber
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 176, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 285, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1731, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1579, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 232, in hget
+    value = generator()
+            ^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 180, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 192, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+2024-11-05 17:21:10,300 ERROR frappe Unable to load translations
+Site: uber
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 176, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 285, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1731, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1579, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 232, in hget
+    value = generator()
+            ^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 180, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 192, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+2024-11-05 17:21:10,302 ERROR frappe Unable to load translations
+Site: uber
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/frappe-bench/apps/frappe/frappe/app.py", line 176, in init_request
+    frappe.init(site, sites_path=_sites_path, force=True)
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 285, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1731, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1579, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 164, in get_all_translations
+    return frappe.cache.hget(MERGED_TRANSLATION_KEY, lang, generator=_merge_translations)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 232, in hget
+    value = generator()
+            ^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 152, in _merge_translations
+    all_translations.update(get_translations_from_apps(lang))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 180, in get_translations_from_apps
+    translations.update(get_translations_from_csv(lang, app) or {})
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/translate.py", line 192, in get_translations_from_csv
+    os.path.join(frappe.get_app_path(app, "translations"), lang + ".csv"), lang, app
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1544, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1574, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/frappe-bench/apps/frappe/frappe/__init__.py", line 1515, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'cabs'
+2024-11-06 06:28:21,427 ERROR frappe New Exception collected in error log
+Site: uber
+Form Dict: {'fields': '[first_name]'}
+2024-11-07 18:59:18,942 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"ka1qmkrrev","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":0,"order":"RO-11-2024-18","vehicle":12,"driver":"16","rate":50,"total_amount":60,"doctype":"Ride Booking","items":[{"name":"aqtenv9rab","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":1,"source":"A","distance":5,"destination":"B","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","doctype":"Ride bookings Table"},{"docstatus":0,"doctype":"Ride bookings Table","name":"53qkn9ed3j","__unsaved":1,"owner":"Administrator","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","idx":2,"source":"B","destination":"C","distance":2,"creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator"}],"after_submitting":"ds","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-07 18:59:55,354 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"ka1qmkrrev","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":0,"order":"RO-11-2024-18","vehicle":12,"driver":"16","rate":50,"total_amount":60,"doctype":"Ride Booking","items":[{"name":"aqtenv9rab","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":1,"source":"A","distance":5,"destination":"B","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","doctype":"Ride bookings Table"},{"docstatus":0,"doctype":"Ride bookings Table","name":"53qkn9ed3j","__unsaved":1,"owner":"Administrator","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","idx":2,"source":"B","destination":"C","distance":2,"creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator"}],"after_submitting":"","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-07 19:00:11,898 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"ka1qmkrrev","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":0,"order":"RO-11-2024-18","vehicle":12,"driver":"16","rate":50,"total_amount":null,"doctype":"Ride Booking","items":[{"name":"aqtenv9rab","owner":"Administrator","creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator","docstatus":0,"idx":1,"source":"A","distance":5,"destination":"B","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","doctype":"Ride bookings Table"},{"docstatus":0,"doctype":"Ride bookings Table","name":"53qkn9ed3j","__unsaved":1,"owner":"Administrator","parent":"ka1qmkrrev","parentfield":"items","parenttype":"Ride Booking","idx":2,"source":"B","destination":"C","distance":2,"creation":"2024-11-07 22:55:02.646780","modified":"2024-11-08 00:03:12.100047","modified_by":"Administrator"}],"after_submitting":"","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 11:35:19,541 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Vehicle by its Status","owner":"Administrator","creation":"2024-11-08 17:03:33.813184","modified":"2024-11-08 17:03:33.813184","modified_by":"Administrator","docstatus":0,"idx":0,"report_name":"Vehicle by its Status","ref_doctype":"Vehicle","is_standard":"Yes","module":"cabs","report_type":"Report Builder","add_total_row":0,"disabled":0,"prepared_report":0,"timeout":0,"json":{"filters":[],"fields":[["status","Vehicle"],["_aggregate_column","Vehicle"]],"order_by":"`tabVehicle`.creation desc","add_totals_row":0,"page_length":20,"column_widths":{"status":120,"_aggregate_column":200},"group_by":{"group_by":"`tabVehicle`.`status`","aggregate_function":"count","aggregate_on":null}},"doctype":"Report","filters":[],"columns":[],"roles":[{"name":"f6hpj0agqp","owner":"Administrator","creation":"2024-11-08 17:03:33.827698","modified":"2024-11-08 17:03:33.827698","modified_by":"Administrator","docstatus":0,"idx":1,"role":"System Manager","parent":"Vehicle by its Status","parentfield":"roles","parenttype":"Report","doctype":"Has Role"}],"__last_sync_on":"2024-11-08T11:34:10.613Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 12:02:04,146 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Vehicles by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:49:36,395 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:49:43,714 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:50:50,651 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:50:58,504 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:51:28,973 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 12:52:03,884 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 13:02:34,431 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 16:40:08,563 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 16:40:49,520 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 17:09:46,391 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'report_name': 'Revenue by Make', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2024-11-08 18:35:32,150 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doctype': 'Airplane Ticket', 'with_parent': '1', 'cached_timestamp': '2024-11-08 23:44:02.514411', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-11-08 18:47:01,663 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"psdj9np7qp","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"}],"__last_sync_on":"2024-11-08T18:46:55.705Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 18:47:30,057 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"psdj9np7qp","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"}],"__last_sync_on":"2024-11-08T18:46:55.705Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 18:47:42,632 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"psdj9np7qp","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"}],"__last_sync_on":"2024-11-08T18:47:38.666Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 18:48:39,673 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:03:02.816923","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[],"__last_sync_on":"2024-11-08T18:48:35.427Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 19:04:45,309 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:25:21.468825","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"6jsghni8er","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:25:21.468825","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"}],"__last_sync_on":"2024-11-08T19:04:41.712Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 19:04:59,752 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:25:21.468825","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"6jsghni8er","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:25:21.468825","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"}],"__last_sync_on":"2024-11-08T19:04:41.712Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 19:21:19,592 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532534,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"7hv1bvgocq","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"},{"name":"341lmuel2k","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":2,"item":"Early Check-In","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"},{"docstatus":0,"doctype":"Airplane Ticket Add-on Item","name":"new-airplane-ticket-add-on-item-wkxltagcaj","__islocal":1,"__unsaved":1,"owner":"Administrator","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","idx":3,"__unedited":false,"item":"Early Check-In"}],"__last_sync_on":"2024-11-08T19:20:19.378Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-08 19:21:24,841 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doctype': 'Airplane Ticket', 'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-11-08 19:53:11,505 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'doc': '{"name":"Go First-007-VTZ-to-TRV-020","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":0,"passenger":"2","flight":"Go First-007","source_airport":"Visakhapatnam Airport","source_airport_code":"VTZ","destination_airport":"Trivandrum International Airport","destination_airport_code":"TRV","departure_date":"2024-11-08","departure_time":"23:58:36","duration_of_flight":3600,"status":"Booked","flight_price":3532,"total_amount":0,"doctype":"Airplane Ticket","add_ons":[{"name":"7hv1bvgocq","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":1,"item":"Airport Lounge Access","amount":2,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"},{"name":"341lmuel2k","owner":"Administrator","creation":"2024-11-08 23:59:00.129754","modified":"2024-11-09 00:45:32.632624","modified_by":"Administrator","docstatus":0,"idx":2,"item":"Early Check-In","amount":200,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","doctype":"Airplane Ticket Add-on Item"},{"docstatus":0,"doctype":"Airplane Ticket Add-on Item","name":"new-airplane-ticket-add-on-item-hlucjmsshb","__islocal":1,"__unsaved":1,"owner":"Administrator","amount":0,"parent":"Go First-007-VTZ-to-TRV-020","parentfield":"add_ons","parenttype":"Airplane Ticket","idx":3,"__unedited":false,"item":"Airport Lounge Access"}],"__last_sync_on":"2024-11-08T19:39:35.151Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-11-09 16:31:13,647 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'data': '{"flight":"Vistara-009-11-2024-00038","flight_price":"6560.0","passenger":"8","doctype":"Airplane Ticket","web_form_name":"ticket-booking-web-form"}', 'web_form': 'ticket-booking-web-form', 'for_payment': 'false', 'cmd': 'frappe.website.doctype.web_form.web_form.accept'}
+2024-11-09 16:31:17,569 ERROR frappe New Exception collected in error log
+Site: dev.localhost
+Form Dict: {'data': '{"flight":"Vistara-009-11-2024-00038","flight_price":"6560.0","passenger":"8","doctype":"Airplane Ticket","web_form_name":"ticket-booking-web-form"}', 'web_form': 'ticket-booking-web-form', 'for_payment': 'false', 'cmd': 'frappe.website.doctype.web_form.web_form.accept'}

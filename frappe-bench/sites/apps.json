@@ -1,0 +1,31 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "16.0.0-dev"
+    },
+    "cabs": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "00b77bc1a61af472421d418bdc94a2ca008cc8a9",
+            "branch": "cabs"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "airplane_mode": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "7fff12425dd96ddfda0a7f35f5eba1b8ec0a4f8f",
+            "branch": "RKS"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    }
+}

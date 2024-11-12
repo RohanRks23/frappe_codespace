@@ -1,0 +1,71 @@
+2024-11-08 18:38:34,455 INFO ipython === bench console session ===
+2024-11-08 18:38:34,455 INFO ipython frappe.get_all(doctype = "Ride Booking", fields = ["SUM(total_amount) AS total_revenue", "vehicle.make","vehicle"], filters = {"docstatus": 0}, group_by = "make", order_by = "make DESC")
+2024-11-08 18:38:34,456 INFO ipython frappe.get_all("Airplane Ticket Add-on Type", "name")
+2024-11-08 18:38:34,456 INFO ipython frappe.get_all(doctype = "Airplane Ticket Add-on Type", fields = "name")
+2024-11-08 18:38:34,456 INFO ipython frappe.get_all(doctype = "Airplane Ticket Add-on Type", field = "name")
+2024-11-08 18:38:34,457 INFO ipython frappe.get_all(doctype = "Airplane Ticket Add-on Type", fields = "id")
+2024-11-08 18:38:34,457 INFO ipython frappe.get_all(doctype = "Airplane Ticket Add-on Type")
+2024-11-08 18:38:34,458 INFO ipython === session end ===
+2024-11-09 06:16:51,706 INFO ipython === bench console session ===
+2024-11-09 06:16:51,708 INFO ipython self.seat = (f"{##} {A-E}")
+2024-11-09 06:16:51,708 INFO ipython self.seat = (f"{##}")
+2024-11-09 06:16:51,709 INFO ipython self.seat = (f"{int}")
+2024-11-09 06:16:51,709 INFO ipython seat = (f"{int}")
+2024-11-09 06:16:51,709 INFO ipython return seat
+2024-11-09 06:16:51,709 INFO ipython seat = (f"{int}") return seat
+2024-11-09 06:16:51,709 INFO ipython def validate(self):
+        self.seat = (f"{##} {A-E}")
+2024-11-09 06:16:51,709 INFO ipython def validate(self):
+        self.seat = (f"{int}")
+        return self.seat
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"{int}")
+        self.seat = seat
+        return self.seat
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        return self.seat
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        return 
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        consol.log(self.seat)
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        consol.log(self.seat);
+        
+2024-11-09 06:16:51,710 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        consol.print (self.seat);
+        
+2024-11-09 06:16:51,711 INFO ipython def validate(self):
+        seat = (f"hello")
+        self.seat = seat
+        consol.print (self.seat)
+        
+2024-11-09 06:16:51,713 INFO ipython clear
+2024-11-09 06:16:51,713 INFO ipython === session end ===
+2024-11-09 16:25:11,239 INFO ipython === bench console session ===
+2024-11-09 16:25:11,244 INFO ipython frm.doc.flight_price
+2024-11-09 16:25:11,245 INFO ipython doc.flight_price
+2024-11-09 16:25:11,245 INFO ipython frappe.get_all("Airplane Tickets", fields = ["flight_price"])
+2024-11-09 16:25:11,245 INFO ipython frappe.get_all("Airplane Ticket", fields = ["flight_price"])
+2024-11-09 16:25:11,246 INFO ipython frappe.get_all("Airplane Ticket")
+2024-11-09 16:25:11,246 INFO ipython frappe.get_all("Airplane Ticket", fields = ["flight_price"])
+2024-11-09 16:25:11,247 INFO ipython frappe.get_all("Airplane Ticket", fields = ["flight_price"])
+2024-11-09 16:25:11,247 INFO ipython frappe.get_all("Airplane Ticket")
+2024-11-09 16:25:11,248 INFO ipython frappe.get_all("Airplane Ticket")
+2024-11-09 16:25:11,248 INFO ipython frm.doc.flight_price
+2024-11-09 16:25:11,248 INFO ipython frappe.get_all("Airplane Ticket")
+2024-11-09 16:25:11,249 INFO ipython === session end ===

@@ -1,0 +1,10 @@
+_HiStOrY_V2_
+SELECT\040*
+FROM\040tabDriver
+;
+SELECT\040*\040FROM\040tabDriver;
+SELECT\040*
+FROM\040tabVehicle
+;
+SELECT\040*\040FROM\040tabVehicle;
+clear
